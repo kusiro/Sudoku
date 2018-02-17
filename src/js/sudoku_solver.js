@@ -156,9 +156,9 @@ export default class Sudoku_Helper {
                         if( cls.sign[i] ) {
                             this._set(cls.var[i], 0);
                             if( !(cls.var[i] in this._from) )
-                                this._from[cls.var[i]] = [[row, num]];
+                                this._from[cls.var[i]] = [[row, col]];
                             else
-                                this._from[cls.var[i]].push([row, num]);
+                                this._from[cls.var[i]].push([row, col]);
                             setted = true;
                         }
                         else {
