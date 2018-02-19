@@ -25,7 +25,8 @@ $('document').ready(function(){
             var reason_cause = solver.next[this.dataset.key].reason;
             for(var i = 0; i < reason_cause.length; i++){
                 var reason_num = '.raw_' + reason_cause[i][0] + ' .colum_' + reason_cause[i][1];
-                document.querySelector(reason_num).style.backgroundColor = "green";
+                document.querySelector(reason_num).style.backgroundColor = "#009D9B";
+                document.querySelector(reason_num).style.color = "#394145";
             }
         }
     });
@@ -35,6 +36,7 @@ $('document').ready(function(){
             for(var i = 0; i < reason_cause.length; i++){
                 var reason_num = '.raw_' + reason_cause[i][0] + ' .colum_' + reason_cause[i][1];
                 document.querySelector(reason_num).style.background = "transparent";
+                document.querySelector(reason_num).style.color = "#333";
             }
         }
     });
@@ -48,7 +50,7 @@ $('document').ready(function(){
                 var reason_num = '.raw_' + reason_cause[i][0] + ' .colum_' + reason_cause[i][1];
                 document.querySelector(reason_num).style.background = "transparent";
             }
-            
+
             solver.set(parseInt(this.dataset.raw, 10), parseInt(this.dataset.colum, 10), parseInt(this.value, 10));
             for(var i = 0; i < solver.next.length; i++){
                 var alert_num = '.raw_' + solver.next[i].row + ' .colum_' + solver.next[i].col
