@@ -8,12 +8,11 @@ module.exports = {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'public')
     },
-    // resolve: {
-    //     alias: {
-    //         vue: 'vue/dist/vue.js'
-    //     }
-    // },
-
+    resolve: {
+        alias: {
+            'vue$': 'vue/dist/vue.esm.js'
+        }
+    },
     module: {
         rules:[
             {
