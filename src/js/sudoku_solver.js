@@ -165,13 +165,14 @@ export default class Sudoku_Helper {
                             let reasons = []
                             for(let j=0; j<cls.var.length; ++j) {
                                 if( i == j ) continue;
-                                let duplicated = false;
-                                for(let k=0; k<j; ++k)
-                                    if( this._from[cls.var[j]].join() === this._from[cls.var[k]].join() )
-                                        duplicated = true;
                                 reasons = reasons.concat(this._from[cls.var[j]]);
                             }
-                            this._next[iidx(cls.var[i])] = reasons;
+                            this._next[iidx(cls.var[i])] = reasons.filter((pos, idx) => {
+                                for(let j=0; j<idx; ++j)
+                                    if( reasons[j].join() === pos.join() )
+                                        return false;
+                                return true;
+                            });
                         }
                         break;
                     }
