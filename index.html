@@ -11,7 +11,7 @@
         <div class="back_border">
             <div class="containor">
                 <div v-for="(i, index) in 9" v-bind:class="'raw raw_' + [index]">
-                    <input type="text" v-for="(j, idx) in 9" :class="'colum colum_' + idx" :data-colum = "idx" :data-raw="index">
+                    <input type="text" v-for="(j, idx) in 9" :class="'colum colum_' + idx" :data-colum = "idx" :data-raw = "index" data-key = "unset" data-val = "unset">
                 </div>
             </div>
         </div>
