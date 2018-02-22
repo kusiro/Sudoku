@@ -81,7 +81,7 @@ $('document').ready(function(){
             console.log(solver.next)
             this.dataset.key = "setted";
             this.dataset.val = "setted";
-
+            console.log("ya")
         }
     })
 
